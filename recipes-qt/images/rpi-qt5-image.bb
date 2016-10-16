@@ -1,0 +1,68 @@
+DESCRIPTION="ImageFile for Qt5."
+LICENSE="MIT"
+PR="r0"
+LIC_FILES_CHKSUM="file://(file://)${COREBASE}/LICENSE;md5=3f40d7994397109285ec7b81fdeb3b58\
+file://(file://)${COREBASE}/meta/COPYING.MIT;md5
+
+IMAGE_FEATURES+="ssh-server-opensshpackage-management"
+IMAGE_INSTALL+= "\
+  packagegroup-core-boot\
+  packagegroup-core-full-cmdline\
+  packagegroup-base-wifi\
+  packagegroup-base-bluetooth\
+  openssh-sftp\
+  openssh-sftp-server\
+  kernel-modules\
+  packagegroup-core-buildessentialpkgconfig\
+  boostcmakezlibglib-2.0\
+  ruby\
+  cpufrequtils\
+  userland\
+  gstreamer\
+  gst-meta-video\
+  gst-plugins-base-app\
+  gst-plugins-base\
+  gst-plugins-good\
+  gst-plugins-good-rtsp\
+  gst-plugins-good-udp\
+  gst-plugins-good-rtpmanager\
+  gst-plugins-good-rtp\
+  gst-plugins-good-video4linux2\
+  openssh-sftp-server\
+  qtbase\
+  qtbase-fonts\
+  qtbase-plugins\
+  qtbase-tools\
+  qtdeclarative\
+  qtdeclarative-plugins\
+  qtdeclarative-tools\
+  qtdeclarative-qmlplugins\
+  qtmultimedia\
+  qtmultimedia-plugins\
+  qtmultimedia-qmlplugins\
+  qtsvg\
+  qtsvg-plugins\
+  qtsensors\
+  qtimageformats-plugins\
+  qtsystems\
+  qtsystems-tools\
+  qtsystems-qmlplugins\
+  qtscript\
+  qt3d\
+  qt3d-qmlplugins\
+  qt3d-tools\
+  qtconnectivity-qmlplugins\
+  qtlocation-plugins\
+  qtlocation-qmlplugins\
+  cairopango fontconfig freetype pulse audio dbus\
+  alsa-lib alsa-tools alsa-state alsa-utils-alsaconf\
+  i2c-tools\
+  libdrm\
+  qtwebkit-qmlplugins\
+  qtwebkit\
+  qtsmarthome\
+  qt5everywheredemo\
+  cinematicexperience\
+  qt5-demo-extrafiles\
+"
+inheritcore-imagepopulate_sdk_qt5
