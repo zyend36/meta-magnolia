@@ -32,7 +32,7 @@ QT5_PKGS = " \
     qtwebsockets-qmlplugins \
     qtvirtualkeyboard \
     qtxmlpatterns \
-    alsa-lib alsa-tools alsa-state pulseaudio \
+    alsa-lib alsa-tools alsa-state pulseaudio alsa-utils-alsaconf \
 "
 
 IMAGE_INSTALL += " \
