@@ -1,0 +1,5 @@
+
+PACKAGECONFIG_append = " \
+    gstreamer \
+"
+
