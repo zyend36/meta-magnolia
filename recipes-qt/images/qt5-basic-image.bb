@@ -2,6 +2,8 @@ SUMMARY = "A basic Qt5 qwidgets dev image"
 LICENSE = "MIT"
 
 #require console-image.bb
+inherit core-image distro_features_check
+
 
 QT_TOOLS = " \
     qtbase \
@@ -35,5 +37,7 @@ IMAGE_INSTALL += " \
     ${QT_SERIALPORT} \
     ${TSLIB} \
 "
+IMAGE_INSTALL_append = " glibc-staticdev libstdc++ ldd bash"
+
 
 export IMAGE_BASENAME = "qt5-basic-image"

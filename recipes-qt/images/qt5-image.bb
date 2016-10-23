@@ -4,11 +4,14 @@ LICENSE = "MIT"
 
 require qt5-basic-image.bb
 
+inherit populate_sdk_qt5
+
 QT5_PKGS = " \
     gstreamer1.0 \
     gst-plugins-base-app \
     gst-plugins-base \
     gst-plugins-good \
+    gst-plugins-bad \
     qt3d \
     qt3d-qmlplugins \
     qtcharts \
@@ -32,11 +35,12 @@ QT5_PKGS = " \
     qtwebsockets-qmlplugins \
     qtvirtualkeyboard \
     qtxmlpatterns \
-    alsa-lib alsa-tools alsa-state pulseaudio alsa-utils-alsaconf \
+    alsa-lib alsa-tools alsa-state pulseaudio  \
 "
 
 IMAGE_INSTALL += " \
     ${QT5_PKGS} \
+    cinematicexperience \
 "
 
 export IMAGE_BASENAME = "qt5-image"
